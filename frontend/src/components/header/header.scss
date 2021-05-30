@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+.audit-checklist-listing-header {
+  background-color: $white-color;
+  padding: 9px 5px;
+  box-shadow: -1px 6px 10px 1px rgb(0 0 0 / 25%);
+  position: relative;
+  min-height: 65px;
+  
+ 
+  span {
+    color: var(--link);
+  }
+
+  h1,
+  h4 {
+    color: $orance-color;
+    font-size: 27px !important;
+    width: 40%;
+    text-align: center;
+  }
+
+
+
+
+  h1 {
+    span {
+      color: $orance-color;
+      margin-top: 10px;
+      display: inline-block;
+      @media screen and (max-width: 500px) {
+        word-break: break-word;
+        font-size: 1.0em;
+      }
+    }
+  }
+}
+
+.inners {
+  text-align: center;
+}
+.homePage {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .header-title-back-lbl {
+    display: none;
+  }
+
+  .audit-checklist-listing-header {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    .fas {
+      font-size: 1.2em;
+      margin-top: 5px;
+    }
+    h1,
+    h4 {
+      width: auto !important;
+    }
+  }
+}

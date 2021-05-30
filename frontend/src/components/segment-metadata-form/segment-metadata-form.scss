@@ -1,0 +1,22 @@
+.segment-metadata-form-component {
+  padding: 5px;
+  input {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
+  .input-container {
+    padding: 5px;
+    .success {
+      border: 2px solid green;
+      // border-color: green;
+    }
+    .error {
+      border: 0.5px solid #fd7777;
+      padding: 0px;
+    }
+  }
+  .error-message {
+    color: #fd7777;
+  }
+}

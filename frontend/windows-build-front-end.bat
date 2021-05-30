@@ -1,0 +1,1 @@
+npm install && npm run build && del /s /q dist && xcopy /s /e /i /h /k /f /c /y "build" "dist"

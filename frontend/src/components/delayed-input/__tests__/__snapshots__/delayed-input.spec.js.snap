@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing delayed input should do snapshot 1`] = `
+<div
+  className="delayed-input-component margin-bottom-20 "
+>
+  <div
+    className="input-container "
+  >
+    <textarea
+      className=""
+      data-testid="delayed-input-it"
+      onChange={[Function]}
+      rows="1"
+      value=""
+    />
+  </div>
+</div>
+`;

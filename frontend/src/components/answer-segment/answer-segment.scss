@@ -1,0 +1,96 @@
+@import '../../styles/variables.scss';
+.answer-segment-component {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  .segment-metadata-form-component{
+    .input-container {
+      .input-icon {
+        position: relative;
+        top: -12px;
+        .icon {
+          color: #fff;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+ 
+  span {
+    color: unset;
+  }
+  .header {
+    padding: 10px;
+    font-family: Exo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #333;
+  }
+
+  .card {
+    border-radius: 0;
+    margin: 10px;
+    background: #f5f6f8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+  .segment-metadata-form-component {
+    border-top: 1px solid #d5d6d8;
+  }
+  .certificate-name {
+    border: 1px solid $text_blue;
+    text-align: center;
+    max-width: 60%;
+    @media screen and (max-width: 768px) { 
+      max-width: 100%;
+    }
+  }
+  .certificate-title {
+    color: $text_blue;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: auto;
+  }
+}
+
+.answer-segment-item-component {
+  span {
+    color: unset;
+  }
+  border-top: 1px solid #d5d6d8;
+  color: black;
+  .details-container,
+  .inputs-container {
+    padding: 5px 10px;
+  }
+  .name {
+    color: #333;
+  }
+  .number {
+    color: #77787a;
+  }
+
+  .radio-buttons {
+    .radio-button-item {
+      width: 50%;
+      height: 35px;
+    }
+  }
+  .top-label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .radio-button-item {
+    input[type="radio"] {
+      position: relative;
+      top: -4px;
+    }
+  }
+}

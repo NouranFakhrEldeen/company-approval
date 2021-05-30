@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.dropDown-container {
+  .dropDown-icon-cont {
+    color: $white-color;
+  }
+  .dropDown-icon-left {
+    height: 36px;
+    background-color: $orance-color;
+    width: 34px;
+    display: inline-block;
+    color: $white-color;
+    text-align: center;
+    font-size: $input-icons-size;
+    position: absolute;
+    padding-top: 5px;
+    margin-top: 1px;
+  }
+  .dropDown-icon-left + div {
+    margin-left: 34px;
+    width: 90%;
+  }
+  .dropDown-icon-left + div > div {
+    border-radius: 0;
+  }
+
+  div[class*='indicatorContainer']:last-child {
+    background-color: $common_blue;
+  }
+}

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filter deviations form component Should render (smoke test) 1`] = `
+<DocumentFragment>
+  <div
+    class="input-field-container"
+  >
+    <input
+      class="padding-5"
+      placeholder="Search..."
+    />
+  </div>
+</DocumentFragment>
+`;

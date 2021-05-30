@@ -1,0 +1,91 @@
+
+.error-modal-btnAlignment {
+  text-align: right;
+}
+
+.error-modal-btnAlignment button {
+  font-size: 17px;
+  margin: 5px;
+}
+
+.error-modal-content {
+  border: 2px solid #c9312c;
+  display: flex;
+}
+
+.modal-content,
+.error-modal-content {
+  border-radius: 4px;
+}
+
+.error-handling-modal,
+.modal-content {
+  border-radius: 6px !important;
+}
+
+.error-handling-modal .modal-body {
+  padding: 5px;
+}
+
+.error-modal-leftBg {
+  width: 30px;
+  min-height: 114px;
+  background-color: #c9312c;
+  margin-right: 20px;
+}
+
+.error-modal-leftBg .fa-exclamation-triangle {
+  position: relative;
+}
+
+.error-modal-leftBg .glyphicon,
+.error-modal-leftBg .fa-exclamation-triangle {
+  font-size: 1.4em;
+  color: #fff;
+  left: 3px;
+  top: 40%;
+}
+
+.error-modal-leftBg,
+.error-modal-rightCont {
+  display: inline-block;
+}
+
+.error-modal-rightCont {
+  width: 93%;
+  margin-top: 17px;
+}
+
+.error-modal-rightCont p {
+  margin-top: 0 !important;
+}
+
+.error-modal-btnAlignment button:focus,
+.error-modal-btnAlignment button:active,
+.error-modal-btnAlignment button:hover,
+.error-modal-btnAlignment button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.error-modal-close-icon {
+  position: absolute;
+  top: 5px !important;
+  border-radius: 0 !important;
+  right: 5px !important;
+  width: 25px !important;
+  height: 27px !important;
+  opacity: 0.6;
+}
+
+.error-modal-close-icon span:first-child {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.error-modal-rightCont h2 {
+  margin-top: 0;
+}

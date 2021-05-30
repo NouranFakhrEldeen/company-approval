@@ -1,0 +1,11 @@
+{
+    "body": "test body",
+    "subject": "test subject",
+    "attachments": [{
+        "name": "test.pdf",
+        "content": {
+            "data": "test",
+            "type": "application/pdf"
+        }
+    }]
+}

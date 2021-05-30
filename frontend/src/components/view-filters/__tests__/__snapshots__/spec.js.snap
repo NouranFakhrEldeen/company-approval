@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filter deviations form component Should render (smoke test) 1`] = `
+<DocumentFragment>
+  <div
+    class="row margin-bottom-10"
+  />
+</DocumentFragment>
+`;

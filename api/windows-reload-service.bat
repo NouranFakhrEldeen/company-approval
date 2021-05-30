@@ -1,0 +1,1 @@
+net stop "company-approval-service" && net start "company-approval-service"

@@ -1,0 +1,70 @@
+.confirm-set-answer-container {
+  .confirm-set-answer-button {
+    min-width: 240px;
+  }
+  .confirm-set-add-button {
+    background-color: #10955e;
+    min-width: 240px;
+  }
+  .confirm-set-answer-button:disabled {
+    opacity: 0.5;
+  }
+  .confirm-set-add-button:disabled {
+    opacity: 0.5;
+  }
+  .create-new-segment-container {
+    padding: 0 5px;
+  }
+  .create-new-segment-buttons {
+    padding: 10px 0;
+    border-bottom: 1px solid #b9babc;
+    .btnContClass {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+.answer-segment-component {
+  @media screen and (max-width: 768px) {
+    .drop-container {
+      .dropzone {
+        position: relative;
+        top: -10px;
+        div.text-center {
+          .row.mt-5.ml-4 {
+            margin-left: 0 !important;
+          }
+        }
+        .dropzone-content {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+.confirm-set-view-container {
+  color: #333;
+  p,
+  span {
+    color: #333;
+  }
+  .confirm-set-info {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.add-contact-button {
+  background-color: #34a4c2;
+  color: white;
+}
+.icon {
+  margin-left: 5px;
+  i {
+    color: red;
+  }
+}

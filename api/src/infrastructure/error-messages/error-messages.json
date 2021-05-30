@@ -1,0 +1,18 @@
+{
+    "COMPANY_DUPLICATION": "Company name or bussiness id is already exist",
+    "COMPANY_ID_WRONG": "No company exist with this id",
+    "CONFIRM_SET_DUPLICATION": "Confirm set already exist",
+    "CONFIRM_SET_ID_WRONG":"No confirm set exist with this id",
+    "CONFIRM_CONTACT_DUPLICATION": "Contact is already exist",
+    "CONFIRM_CONTACT_ID_WRONG": "No contact exist with this id",
+    "SEGMENT_DUPLICATION": "Segment name or checklist id is already exist",
+    "SEGMENT_ID_WRONG": "No segment exist with this id",
+    "SEGMENT_ITEM_DUPLICATION": "Segment Item name or number is already exist",
+    "SEGMENT_ITEM_ID_WRONG": "No segment item exist with this id",
+    "CONFIRM_SEGMENT_DUPLICATION": "Segment is already exist",
+    "CONFIRM_SEGMENT_ID_WRONG": "No segment exist with this id",
+    "CONFIRM_SEGMENT_ITEM_DUPLICATION": "Segment Item name or number is already exist",
+    "CONFIRM_SEGMENT_ITEM_ID_WRONG": "No segment item exist with this id",
+    "ROLE_DUPLICATION":"Role name is already exist",
+    "ROLE_ID_WRONG":"No role exist with this id"
+}

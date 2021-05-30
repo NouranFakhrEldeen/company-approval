@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing checkbox should do snapshot 1`] = `
+<div>
+  <label>
+    <input
+      data-testid="checkbox"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span />
+  </label>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing button should do snapshot 1`] = `
+<div
+  className="btnContClass"
+>
+  <button
+    data-testid="button"
+    disabled=""
+    onClick={[Function]}
+    type=""
+  >
+    <span
+      className="btnText"
+    />
+  </button>
+</div>
+`;

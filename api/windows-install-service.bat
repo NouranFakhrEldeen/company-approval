@@ -1,0 +1,1 @@
+npm install -g qckwinsvc && qckwinsvc --name "company-approval-service" --description "Company-Approval Tool service" --script "%~dp0dist/main.js" --startImmediately

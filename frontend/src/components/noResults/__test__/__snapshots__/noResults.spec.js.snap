@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing no Results should do snapshot 1`] = `
+<div
+  data-testid="noResults"
+>
+  <h4
+    className="text-center no-results"
+  />
+</div>
+`;

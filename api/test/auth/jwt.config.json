@@ -1,0 +1,10 @@
+{
+    "secret": "AAAAB3NzaC1yc2EAAAABJQAAAQEAmdneksX4CRm+vgw3H77fhgC+qi+LeuBVvyCw0bNt9mXAf2lvRgEfDyRxqV9xPJ4moEIu8ZprNzzbswEQaLU1it2j8/W6R2dfcl1Pnl0O3Q3X4bo38VCH2qIlwqt3fTztlnXi2hJUI9urlZnEReurJj/u4KyHXil+fSOV/A1ZWN9jKUIWJdKhjsujl7z0fsgGP2V1bBI4HOTFkUlKA4dXl/bzyCi1JygCkgvfUClkY46lsT9RflMUUgTcJVtoNCTH17cvc+X3xi+aKXXguq+7ZfzGfchN3c",
+    "expiration": "7d",
+    "user": {
+        "firstName": "name",
+        "lastName": "lName",
+        "role": "TR Pääkäyttäjä",
+        "email":"test@test.com"
+    }
+}

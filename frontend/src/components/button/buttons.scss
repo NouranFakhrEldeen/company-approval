@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.btnContClass {
+  .btnText {
+    color: $white-color;
+  }
+  .iconsCont {
+    display: inline-block;
+    color: $white-color;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+.box {
+  border: 1px solid $border_grey;
+  margin: 2px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.date {
+  text-align: end;
+}

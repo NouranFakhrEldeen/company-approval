@@ -1,0 +1,168 @@
+@import './variables.scss';
+
+// main fonts
+body,
+p,
+div,
+span:not([class*='fa']),
+label,
+input,
+textarea,
+a,
+header,
+footer,
+iframe,
+img,
+li,
+nav,
+ul {
+  font-family: $main_font_family !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 span:not([class*='fa']),
+h2 span:not([class*='fa']),
+h3 span:not([class*='fa']),
+h4 span:not([class*='fa']),
+h5 span:not([class*='fa']),
+h6 span:not([class*='fa']) {
+  font-family: $headers_font_family !important;
+}
+
+body {
+  color: $main-color;
+  background-color: $body-color;
+}
+
+h1 {
+  color: $main-color;
+}
+hr {
+  border: 1px solid $grey_200 !important;
+}
+
+
+button {
+  background-color: $content-color;
+}
+span {
+  color: $secondary;
+}
+p {
+  color: $content-color;
+}
+
+// generally used
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: #1c3154;
+  color: #fff;
+  letter-spacing: 1pt;
+  font-weight: 400;
+  border-color: #0f1b2e;
+}
+
+span[class*='fa-'] {
+  color: $white_color;
+}
+
+.btn-link {
+  border: 1px solid $common_blue;
+  span {
+    color: $common_blue !important;
+  }
+}
+.btn-link:hover {
+  text-decoration: none !important;
+}
+
+
+
+.home-page {
+  .language-switcher {
+    // position: absolute;
+    // top: 20px;
+    // right: 15px;
+    width: 30%;
+    align-self: center;
+    text-align: right;
+
+
+    button {
+      border: 0;
+      background-color: transparent;
+    }
+    button,
+    span {
+      color: $dark-grey;
+      font-size: 1.1em;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .language-switcher {
+      width: 40%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .logout-btn {
+      text-align: right;
+    }
+    .language-switcher {
+      width: auto;
+    }
+  }
+  
+  .cursor-pointer {
+    div.d-inline-block {
+      i {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  h4 {
+    color: $main-color;
+    display: table-row;
+    // word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+  @media screen and (max-width: 590px) {
+    h4 {
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    h4 {
+      word-break: inherit;
+    }
+    .language-switcher {
+      top: 35px;
+    }
+    .homepage-box {
+      margin-bottom: 40px !important;
+    }
+  }
+}
+.secondry-button {
+  background-color: $orance-color;
+  color: #fff;
+  letter-spacing: 1pt;
+  font-weight: 400;
+}
+.button-noBg {
+  background: transparent;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

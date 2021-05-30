@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test infinite scroll should do snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class=""
+  >
+    <div
+      class="infinite-scroll-component__outerdiv"
+    >
+      <div
+        class="infinite-scroll-component "
+        style="height: auto; overflow: auto;"
+      >
+        <div
+          class="list-group striped"
+          id="results-container"
+        >
+          <div
+            class="list-group-item list-group-item-with-actions cursorPointer"
+          >
+            <p>
+              minivan
+            </p>
+            <span>
+              12345
+            </span>
+          </div>
+          <div
+            class="list-group-item list-group-item-with-actions cursorPointer"
+          >
+            <p>
+              station wagon
+            </p>
+            <span>
+              345456
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

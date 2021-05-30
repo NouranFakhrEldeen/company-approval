@@ -1,0 +1,69 @@
+@import '../../../styles/variables.scss';
+.deviation-container {
+  .wrapper {
+    box-shadow: -1px 6px 10px 1px rgb(0 0 0 / 25%);
+    background-color: $light-grey;
+  }
+
+  .approve {
+    background-color: $green;
+    height: 20px;
+    border-radius: 12px;
+    min-width: 200px;
+    padding: 5px 5px 4px 4px;
+    color: $white-color;
+    margin-left: 10px;
+    font-size: 0.9em;
+  }
+  .reaudit {
+    background-color: $warning;
+    height: 20px;
+    border-radius: 12px;
+    min-width: 200px;
+    padding: 5px 5px 4px 4px;
+    color: $black;
+    margin-left: 10px;
+    font-size: 0.9em;
+  }
+  .status {
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    min-width: 200px;
+  }
+  .descriptionTextArea {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .companies-list,
+  .list-group-item,
+  .row {
+    display: block;
+    text-align: center;
+  }
+  .deviation-review-comment {
+    margin-top: 30px;
+    width: 90%;
+  }
+  .deviation-review {
+    text-align: left;
+  }
+}
+
+.deviation-approve-button {
+  background-color: #10955e;
+}
+.deviation-button{
+  max-width: 380px;
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .deviation-review-comment {
+    .col-sm-5.col-lg-12.padding-0 {
+      max-width: initial !important;
+      width: 100% !important;
+    }
+  }
+}

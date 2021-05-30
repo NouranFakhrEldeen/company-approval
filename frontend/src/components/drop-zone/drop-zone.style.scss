@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+// .container {
+//   transform: translateY(-100%);
+// }
+
+.container p {
+  color: $black;
+  text-align: center;
+}
+.dropzone:focus {
+  outline: 0 !important;
+}
+
+.drop-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 500px;
+  height: 80px;
+  background-color: $silver;
+  border: 4px dashed $black;
+  margin-bottom: 20px;
+}
+.contect {
+  width: 500px;
+  height: 80px;
+}
+
+.dropzone {
+  width: 500px;
+  height: 80px;
+}
+
+.dropzone-content {
+  margin: auto;
+  margin-left: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .drop-container {
+    width: 100%;
+  }
+  .dropzone {
+    width: 100%;
+  }
+}

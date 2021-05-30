@@ -1,0 +1,1 @@
+npm install -g qckwinsvc && qckwinsvc --uninstall --name "company-approval-service" --script "%~dp0dist/main.js"

@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.checkbox-container {
+  background-color: transparent;
+  padding: 0;
+
+  label {
+    background-color: $light-grey;
+    box-shadow: none !important;
+    border: 1px solid $border_grey;
+    margin-top: 5px;
+    color: $dark-grey;
+    padding: 10px 10px;
+    width: 100%;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 10px;
+    color: $black;
+  }
+}
+
+.width-important {
+  label {
+    width: 40% !important;
+  }
+}

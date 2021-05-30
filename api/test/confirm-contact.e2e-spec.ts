@@ -1,0 +1,236 @@
+import { HttpModule, INestApplication } from '@nestjs/common';
+import { Test } from '@nestjs/testing';
+import { getRepositoryToken } from '@nestjs/typeorm';
+import { Role, Company, ConfirmSet, ConfirmSetContact, Segment, ConfirmSetSegmentItem, ConfirmSetSegment, Certificate, Metadata, SegmentItem, Deviation } from '../src/app/entities';
+import * as request from 'supertest';
+import { ConfirmContactController } from '../src/app/controllers';
+import { RoleService, CompanyService, ConfirmSetService, ConfirmContactService, ConfirmSegmentService, ConfirmSegmentItemService, CertificateService, InternalSyncService, SegmentService, SegmentItemService, SmtpServers } from '../src/app/services';
+import { PassportModule } from '@nestjs/passport';
+import { JwtStrategy } from './auth/jwt.strategy';
+import { generateToken } from './auth/token-generator';
+import { mockRepository } from '../src/app/helpers';
+import { NodeMailerService } from '../src/app/smtp-servers/nodemailer.service';
+
+describe('Confirm Contact (e2e)', () => {
+  let app: INestApplication;
+  let roleService;
+  let token: string;
+  beforeAll(async () => {
+    const moduleFixture = await Test.createTestingModule({
+      imports: [PassportModule.register({ defaultStrategy: 'jwt' }), HttpModule],
+      controllers: [ConfirmContactController],
+      providers: [
+        ConfirmContactService,
+        ConfirmSetService,
+        CompanyService,
+        ConfirmSetService,
+        ConfirmSegmentService,
+        ConfirmSegmentItemService,
+        CertificateService,
+        InternalSyncService,
+        RoleService,
+        JwtStrategy,
+        SegmentService,
+        SegmentItemService,
+        SmtpServers,
+        NodeMailerService,
+        {
+          provide: getRepositoryToken(Metadata),
+          useValue: new mockRepository(Metadata),
+        },
+        {
+          provide: getRepositoryToken(Deviation),
+          useValue: new mockRepository(Deviation),
+        },
+        {
+          provide: getRepositoryToken(Certificate),
+          useValue: new mockRepository(Certificate),
+        },
+        {
+          provide: getRepositoryToken(ConfirmSetSegmentItem),
+          useValue: new mockRepository(ConfirmSetSegmentItem),
+        },
+        {
+          provide: getRepositoryToken(ConfirmSetSegment),
+          useValue: new mockRepository(ConfirmSetSegment),
+        },
+        {
+          provide: getRepositoryToken(Segment),
+          useValue: new mockRepository(Segment),
+        },
+        {
+          provide: getRepositoryToken(SegmentItem),
+          useValue: new mockRepository(SegmentItem),
+        },
+        {
+          provide: getRepositoryToken(ConfirmSet),
+          useValue: new mockRepository(ConfirmSet),
+        },
+        {
+          provide: getRepositoryToken(Company),
+          useValue: new mockRepository(Company),
+        },
+        {
+          provide: getRepositoryToken(ConfirmSetContact),
+          useValue: new mockRepository(ConfirmSetContact),
+        },
+        {
+          provide: getRepositoryToken(Role),
+          useValue: new mockRepository(Role),
+        },
+      ],
+    }).compile();
+    token = generateToken().token;
+    app = moduleFixture.createNestApplication();
+    roleService = moduleFixture.get<RoleService>(RoleService);
+    await app.init();
+  });
+  describe('/confirm-set/${confirmSetId}/contact (GET)', () => {
+    it('correct request', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['*:*'] });
+      return request(app.getHttpServer())
+        .get('/')
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect('{"records":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],"pagination":{"count":20,"itemsPerPage":20,"totalPages":2,"currentPage":1,"total":30}}');
+    });
+    it('wrong token', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .get('/')
+        .set('Authorization', 'Bearer ' + 'wrong token')
+        .expect(401);
+    });
+    it('have no access', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .get('/')
+        .set('Authorization', 'Bearer ' + token)
+        .expect(403);
+    });
+  })
+
+  describe('/confirm-set/${confirmSetId}/contact/${id} (GET)', () => {
+    it('correct request', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['*:*'] });
+      return request(app.getHttpServer())
+        .get('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect('{}');
+    });
+    it('wrong token', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .get('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .set('Authorization', 'Bearer ' + 'wrong token')
+        .expect(401);
+    });
+    it('have no access', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .get('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .set('Authorization', 'Bearer ' + token)
+        .expect(403);
+    });
+  })
+
+  describe('/confirm-set/${confirmSetId}/contact (POST)', () => {
+    it('correct request', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['*:*'] });
+      return request(app.getHttpServer())
+        .post('/')
+        .send({
+          "type": "CONTACT",
+          "name": "string",
+          "email": "test@test.com",
+          "phone": "1234567890"
+        })
+        .set('Authorization', 'Bearer ' + token)
+        .expect(201)
+        .expect('{}');
+    });
+    it('wrong DTO', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['*:*'] });
+      return request(app.getHttpServer())
+        .post('/')
+        .send({
+          "type": "CONTACT",
+          "name": "string",
+          "email": "string",
+          "phone": "1234567890"
+        })
+        .set('Authorization', 'Bearer ' + token)
+        .expect(400)
+    });
+    it('wrong token', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .post('/')
+        .send({
+          "type": "CONTACT",
+          "name": "string",
+          "email": "test@test.com",
+          "phone": "1234567890"
+        })
+        .set('Authorization', 'Bearer ' + 'wrong token')
+        .expect(401);
+    });
+    it('have no access', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .post('/')
+        .send({
+          "type": "CONTACT",
+          "name": "string",
+          "email": "test@test.com",
+          "phone": "1234567890"
+        })
+        .set('Authorization', 'Bearer ' + token)
+        .expect(403);
+    });
+  });
+
+  describe('/confirm-set/${confirmSetId}/contact/${id} (PATCH)', () => {
+    it('correct request', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['*:*'] });
+      return request(app.getHttpServer())
+        .patch('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .send({
+          "name": "string1",
+        })
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect('{}');
+    });
+    it('wrong DTO', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['*:*'] });
+      return request(app.getHttpServer())
+        .patch('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .send({ name: 123 })
+        .set('Authorization', 'Bearer ' + token)
+        .expect(400)
+    });
+    it('wrong token', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .patch('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .send({
+          "name": "string1",
+        })
+        .set('Authorization', 'Bearer ' + 'wrong token')
+        .expect(401);
+    });
+    it('have no access', () => {
+      jest.spyOn(roleService, 'getByName').mockResolvedValue({ name: 'role', scopes: ['wrong:scope'] });
+      return request(app.getHttpServer())
+        .patch('/FEAA2F05-045F-EB11-8C90-54BF64198DFB')
+        .send({
+          "name": "string1",
+        })
+        .set('Authorization', 'Bearer ' + token)
+        .expect(403);
+    });
+  });
+
+});

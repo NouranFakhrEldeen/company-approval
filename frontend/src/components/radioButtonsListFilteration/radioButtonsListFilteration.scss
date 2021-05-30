@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.radioButtonsFilterationList {
+  border: 1px solid $border_grey;
+  background-color: $light-grey;
+
+  label {
+    border-bottom: 1px solid $border_grey;
+    width: 100%;
+    height: 40px;
+    padding: 10px 14px;
+    display: block;
+    margin-bottom: 0;
+    span{
+      width: calc(100% - 100px);
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+    .number-wrapper {
+      background-color: $secondary;
+      color: $white-color;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  label:last-child {
+    border-bottom: 0;
+  }
+
+  label.labelSelected {
+    background-color: $sky_blue;
+
+    span {
+      color: $white-color;
+    }
+
+    .number-wrapper {
+      background-color: $white-color;
+      color: $text_blue !important;
+    }
+  }
+
+  .number-wrapper {
+    width: 21px;
+    height: 19px;
+    border-radius: 4px;
+    vertical-align: middle;
+    float: right;
+    line-height: 18px;
+    padding: 0 1px;
+    margin-top: 2px;
+    text-align: center;
+  }
+}

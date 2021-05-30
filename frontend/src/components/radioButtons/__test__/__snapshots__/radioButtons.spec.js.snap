@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing delayed input should do snapshot 1`] = `
+<div
+  className=" radio-button-component col-12 padding-0"
+>
+  <label
+    className="radio-not-selected radio-button-item"
+  >
+    <input
+      checked={false}
+      disabled=""
+      name="answer"
+      onChange={[Function]}
+      type="radio"
+      value="YES"
+    />
+     
+    <span>
+      yes
+    </span>
+  </label>
+  <label
+    className="radio-not-selected radio-button-item"
+  >
+    <input
+      checked={false}
+      disabled=""
+      name="answer"
+      onChange={[Function]}
+      type="radio"
+      value="NO"
+    />
+     
+    <span>
+      no
+    </span>
+  </label>
+</div>
+`;

@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.radio-button-component {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  label {
+    position: relative;
+    color: #fff;
+    padding: 8px 8px;
+    min-width: 100px;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  .radio-default-select {
+    background-color: #285cb9;
+    color: #fff;
+  }
+  .radio-selected {
+    background-color: #285cb9;
+    color: #fff;
+  }
+  .radio-not-selected {
+    background-color: #f5f6f8;
+    color: #000;
+  }
+  label span {
+    width: calc(100% - 30px);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    color: unset;
+    font-weight: normal;
+    font-size: 0.9em;
+    display: inline-block;
+  }
+  .vertical-radio-buttons{
+    position: relative;
+    width: 100%;
+  }
+}
+.radio-button-component.disabled{
+  .radio-not-selected {
+    background-color: transparent;
+    color: #000;
+  }
+}

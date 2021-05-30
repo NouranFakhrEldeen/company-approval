@@ -1,0 +1,17 @@
+.home-page {
+  .count-parent {
+    position: relative;
+    .count {
+      display: inline-block;
+      height: 28px;
+      background-color: red;
+      color: white;
+      border-radius: 14px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0px 8px;
+      font-size: 18px;
+    }
+  }
+}

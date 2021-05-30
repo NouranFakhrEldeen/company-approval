@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.contact-form {
+  @media screen and (max-width: 768px) {
+    .input-field-container {
+      text-align: left;
+    }
+  }
+}
+.add-contact-button {
+  color: $white-color;
+}
+
+
+.text-white-important {
+  span {
+    color: $white-color !important;
+  }
+  
+}

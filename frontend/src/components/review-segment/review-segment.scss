@@ -1,0 +1,146 @@
+@import '../../styles/variables.scss';
+
+.review-segment-component {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  span{
+    color: unset;
+  }
+  .header {
+    padding: 15px 10px 3px 10px;
+    font-family: Exo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $greysh_black;
+  }
+
+  .card {
+    border-radius: 0;
+    margin: 10px;
+    background: $light-grey;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+  .segment-metadata-form-component{
+    border-top: 1px solid $Mystic;
+  }
+  .vertical-radio-buttons{
+    .radio-button-item{
+      display: block;
+      max-width: 260px;
+      margin:0;
+    }
+  }
+  .with-separator{
+    border-top: 1px solid $Mystic;
+  }
+  .metadata-info{
+    padding: 5px 10px;
+    display: inline-block;
+    p{
+      margin:0;
+    }
+    .label{
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+  .radio-button-item {
+    input[type="radio"] {
+      position: relative;
+      top: 1px;
+    }
+    span {
+      position: relative;
+      top: 5px;
+    }
+  }
+}
+
+.description-conatainer {
+  border: 1px solid $Mystic;
+  padding: 5px 10px !important;
+  background-color: $silver_grey;
+}
+
+.review-segment-item-component {
+  span{
+    color: unset;
+  }
+  border-top: 1px solid $Mystic;
+  color: black;
+  .details-container, .inputs-container{
+    padding:5px 10px;
+  }
+  .name {
+    color: $dark-grey;
+
+  }
+  .number{
+    color: $secondary;
+  }
+
+  .radio-buttons {
+    .radio-button-item{
+      width: 50%;
+      height: 35px;
+      border:0;
+      text-align: center;
+      input{
+        display: none;
+      }
+    }
+  }
+  .description-conatainer{
+    padding: 8px 0 10px;
+  }
+  .top-label{
+    padding: 0 2px;
+    font-size:12px;
+    z-index: 999;
+    position: absolute;
+    top:-10px;
+    left: 12px;
+    color:$shuttle_grey;
+    background-color: transparent;
+    .bg-color-white{
+      left:-1px;
+      background-color:$white-color;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top:50%;
+      z-index: -1;
+    }
+  }
+  .radio-disabled-border {
+    cursor: not-allowed;
+    label {
+      border: 1px solid $grey-color !important;
+
+    }
+  }
+  .radio-buttons {
+    .disabled {
+      label {
+        border: 1px solid $Mystic;
+        span {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.report-button.button-noBg .text_blue, .text_blue {
+  color: $text_blue !important;
+}

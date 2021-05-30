@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing textArea should do snapshot 1`] = `
+<div
+  className="col-sm-5 col-lg-12 padding-0 "
+>
+  <textarea
+    data-testid="textArea"
+    onChange={[Function]}
+  />
+</div>
+`;
